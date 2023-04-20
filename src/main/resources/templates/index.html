@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layouts/master-layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title> Home Page</title>
+
+</head>
+<body>
+
+<div layout:fragment="content">
+    <h1 class="bg-warning"> This is the index page </h1>
+    <p> this is the paragraph </p>
+</div>
+
+
+
+
+<!--navbar -->
+<!--<div th:replace="~{fragments/myNavBar::customNavBar}">-->
+<!--</div>-->
+
+<!--<div class="container">-->
+
+<!--    &lt;!&ndash;    select by classname of the attribute&ndash;&gt;-->
+<!--    <div th:insert="~{fragments/myNavBar:: div.title}"></div>-->
+
+<!--    <h1> Here is index page </h1>-->
+
+<!--</div>-->
+
+
+</body>
+</html>

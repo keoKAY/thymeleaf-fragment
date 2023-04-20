@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap.min.css" integrity="sha512-N415hCJJdJx+1UBfULt+i+ihvOn42V/kOjOpp1UTh4CZ70Hx5bDlKryWaqEKfY/8EYOu/C2MuyaluJryK1Lb5Q==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.min.js" integrity="sha512-mp3VeMpuFKbgxm/XMUU4QQUcJX4AZfV5esgX72JQr7H7zWusV6lLP1S78wZnX2z9dwvywil1VHkHZAqfGOW7Nw==" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!--navbar -->
+<!-- calling fragment using fragment expression -->
+<div th:replace="~{fragments/myNavBar::customNavBar}"></div>
+<!--<div th:replace="fragments/myNavBar::customNavBar"> </div>-->
+
+<div class="container">
+    <h1> All Users </h1>
+
+    <div class="row" >
+        <div class="col-4" th:each="user: ${users}">
+            <div th:insert="~{fragments/myCard::authorCard(${user})}"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
